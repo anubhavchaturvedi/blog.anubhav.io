@@ -1,14 +1,18 @@
 {{ define "main" }}
-  {{ range sort .Paginator.Pages }}
+  {{ range sort (where .Paginator.Pages ".Params.unlisted" "!=" "true") }}
   <article class="markdown book-post">
     <h2>
       <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a>
     </h2>
     {{ partial "docs/post-meta" . }}
     <p>
-      {{- .Summary -}}
-      {{ if .Truncated }}
+      {{ with .Params.description }}
+        {{ . }}
+      {{ else }}
+        {{- .Summary -}}
+        {{ if .Truncated }}
         <a href="{{ .RelPermalink }}">...</a>
+        {{ end }}
       {{ end }}
     </p>
   </article>

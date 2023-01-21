@@ -1,9 +1,22 @@
 {{ define "main" }}
 <article class="markdown">
-  <h1>
-    <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a>
-  </h1>
+
+  {{ if not (eq .Params.type "docs")}}
+    <h1>
+      <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a>
+    </h1>
+  {{end}}
+
+  
   {{ partial "docs/post-meta" . }}
+
+  {{ with .Params.description }}
+    <div class="tldr">
+      <strong>tldr</strong>
+      <p>{{ . }}</p>
+    </div>
+  {{ end }}
+
   {{- .Content -}}
 </article>
 {{ end }}

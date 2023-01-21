@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true
+title: "{{ .Name | humanize | title }}"
+date: { { .Date } }
+# bookComments: false
+# bookSearchExclude: false
 ---
-
