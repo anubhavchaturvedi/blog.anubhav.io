@@ -12,7 +12,3 @@ url: "/about-me"
 ---
 
 # About Me
-
-bhjdvjds
-
-anubhav hjbj
