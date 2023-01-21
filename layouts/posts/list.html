@@ -6,13 +6,9 @@
     </h2>
     {{ partial "docs/post-meta" . }}
     <p>
-      {{ with .Params.description }}
-        {{ . }}
-      {{ else }}
-        {{- .Summary -}}
-        {{ if .Truncated }}
+      {{- .Summary -}}
+      {{ if .Truncated }}
         <a href="{{ .RelPermalink }}">...</a>
-        {{ end }}
       {{ end }}
     </p>
   </article>

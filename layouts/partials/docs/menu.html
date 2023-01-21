@@ -1,11 +1,9 @@
-<nav>
 {{ partial "docs/brand" . }}
 
 {{ partial "docs/inject/menu-before" . }}
 {{ partial "docs/inject/menu-after" . }}
 
 {{ partial "docs/search" . }}
-</nav>
 
 <!-- Restore menu position as soon as possible to avoid flickering -->
 {{ $script := resources.Get "menu-reset.js" | resources.Minify }}

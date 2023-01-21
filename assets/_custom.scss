@@ -1,3 +1,58 @@
 /* You can add custom styles here. */
 
 // @import "plugins/numbered";
+
+.post-list-taxonomy {
+    font-size: 0.75rem;
+}
+
+.profile-avatar {
+    border-radius: 50%;
+}
+
+.profile-block {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 2.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.book-search input {
+    background: #00000017;
+}
+
+.book-post {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.397);
+}
+
+.copyright {
+    margin: 0 auto;
+        font-size: 0.6em;
+        color: #999;
+        display: table;
+        
+}
+
+.tldr {
+    margin: 2%;
+    padding: 1rem;
+    background:rgba(0, 0, 0, 0.093);
+    border-radius: 1em;
+}
+
+.reading-time {
+    font-size: 0.8rem;
+    padding-top: 3%;
+    color: rgb(75, 75, 75);
+}
